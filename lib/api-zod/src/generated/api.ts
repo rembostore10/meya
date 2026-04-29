@@ -14,3 +14,20 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Forwards the prayer/wish to the configured Telegram chat
+ * @summary Send a prayer/wish
+ */
+export const sendPrayerBodyPrayerMax = 2000;
+
+export const sendPrayerBodyFromMax = 200;
+
+export const SendPrayerBody = zod.object({
+  prayer: zod.string().min(1).max(sendPrayerBodyPrayerMax),
+  from: zod.string().max(sendPrayerBodyFromMax).optional(),
+});
+
+export const SendPrayerResponse = zod.object({
+  ok: zod.boolean(),
+});

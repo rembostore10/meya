@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface Prayer {
   /**
@@ -17,12 +14,4 @@ export interface Prayer {
   prayer: string;
   /** @maxLength 200 */
   from?: string;
-}
-
-export interface PrayerResult {
-  ok: boolean;
-}
-
-export interface ApiError {
-  error: string;
 }

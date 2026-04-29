@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import { Heart, Sparkles, Star } from "lucide-react";
+import { Heart, Sparkles, Star, Flower2, Flower } from "lucide-react";
 
 type Particle = {
   id: number;
-  type: "heart" | "sparkle" | "star";
+  type: "heart" | "sparkle" | "star" | "flower" | "flower2";
   left: number;
   size: number;
   duration: number;
@@ -13,7 +13,16 @@ type Particle = {
   opacity: number;
 };
 
-const TYPES: Particle["type"][] = ["heart", "sparkle", "star"];
+const TYPES: Particle["type"][] = [
+  "heart",
+  "heart",
+  "flower",
+  "flower2",
+  "sparkle",
+  "star",
+  "heart",
+  "flower",
+];
 
 function makeParticles(count: number): Particle[] {
   return Array.from({ length: count }).map((_, i) => ({
@@ -76,13 +85,25 @@ export function ParticleBackground() {
       <Twinkle count={45} />
       {particles.map((p) => {
         const Icon =
-          p.type === "heart" ? Heart : p.type === "sparkle" ? Sparkles : Star;
+          p.type === "heart"
+            ? Heart
+            : p.type === "sparkle"
+              ? Sparkles
+              : p.type === "star"
+                ? Star
+                : p.type === "flower"
+                  ? Flower
+                  : Flower2;
         const color =
           p.type === "heart"
             ? "text-pink-300"
             : p.type === "sparkle"
               ? "text-amber-200"
-              : "text-rose-200";
+              : p.type === "star"
+                ? "text-rose-200"
+                : p.type === "flower"
+                  ? "text-pink-400"
+                  : "text-fuchsia-300";
 
         return (
           <motion.div

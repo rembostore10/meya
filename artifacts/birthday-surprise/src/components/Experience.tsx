@@ -2,14 +2,23 @@ import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Opening } from "./Opening";
 import { RomanticMessages } from "./RomanticMessages";
+import { PhotoGallery } from "./PhotoGallery";
 import { GiftBox } from "./GiftBox";
 import { BirthdayCake } from "./BirthdayCake";
+import { PrayerForm } from "./PrayerForm";
 import { FinalMessage } from "./FinalMessage";
 import { ParticleBackground } from "./ParticleBackground";
 import { Volume2, VolumeX } from "lucide-react";
 import sceneryImg from "@/assets/scenery.png";
 
-type Stage = "opening" | "messages" | "gift" | "cake" | "final";
+type Stage =
+  | "opening"
+  | "messages"
+  | "gallery"
+  | "gift"
+  | "cake"
+  | "prayer"
+  | "final";
 
 export function Experience() {
   const [stage, setStage] = useState<Stage>("opening");
@@ -54,13 +63,19 @@ export function Experience() {
             <Opening key="opening" onOpen={() => handleNextStage("messages")} />
           )}
           {stage === "messages" && (
-            <RomanticMessages key="messages" onComplete={() => handleNextStage("gift")} />
+            <RomanticMessages key="messages" onComplete={() => handleNextStage("gallery")} />
+          )}
+          {stage === "gallery" && (
+            <PhotoGallery key="gallery" onComplete={() => handleNextStage("gift")} />
           )}
           {stage === "gift" && (
             <GiftBox key="gift" onComplete={() => handleNextStage("cake")} />
           )}
           {stage === "cake" && (
-            <BirthdayCake key="cake" onComplete={() => handleNextStage("final")} />
+            <BirthdayCake key="cake" onComplete={() => handleNextStage("prayer")} />
+          )}
+          {stage === "prayer" && (
+            <PrayerForm key="prayer" onComplete={() => handleNextStage("final")} />
           )}
           {stage === "final" && (
             <FinalMessage key="final" onRestart={() => setStage("opening")} />
