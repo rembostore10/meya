@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "tZZ-e4t4GK2rhB0F3cHMk"
+uri = "file://artifacts/birthday-surprise/src/assets/cake.png"
+type = "image"
+title = "Birthday cake illustration"
+
+[[generated]]
+id = "MCA78_zavQNaWeCVvSZCs"
+uri = "file://artifacts/birthday-surprise/src/assets/bouquet.png"
+type = "image"
+title = "Romantic rose bouquet"
+
+[[generated]]
+id = "LNYkmyj9miPI68UOjw9I1"
+uri = "file://artifacts/birthday-surprise/src/assets/giftbox.png"
+type = "image"
+title = "Gift box with ribbon"
+
+[[generated]]
+id = "xBgufSt4j2uItaCkYcWAP"
+uri = "file://artifacts/birthday-surprise/src/assets/candles.png"
+type = "image"
+title = "Glowing romantic candles"
+
+[[generated]]
+id = "sXTYhfy9hYSQ7hXGV9Dfi"
+uri = "file://artifacts/birthday-surprise/src/assets/scenery.png"
+type = "image"
+title = "Dreamy night sky scenery"
+
+[[generated]]
+id = "X9efwvD9G6TztaQfNUH8I"
+uri = "file://artifacts/birthday-surprise/src/assets/envelope.png"
+type = "image"
+title = "Romantic envelope"
