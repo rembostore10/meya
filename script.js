@@ -9,8 +9,8 @@ window.onload = () => {
     }, 3000); // Tampil selama 3 detik
 };
 
-const teksUcapan = "Selamat ulang tahun, sayangku... ❤️ Terima kasih sudah bertahan sampai sejauh ini, terima kasih sudah menjadi orang yang paling sabar menghadapi aku. Aku sayang banget sama kamu. Semoga di umur yang baru ini, segala doa baikmu dikabulkan semesta. semoga kita tetap bersama selamanyaaaa, I love youuuu mwahh";
-const teksUcapan = "#MeisyaRamadhaniSelamanya"
+const teksUcapan = "Selamat ulang tahun, sayangkuu... ❤️ Terima kasih sudah bertahan sampai sejauh ini, terima kasih sudah menjadi orang yang paling sabar menghadapi aku. Aku sayang banget sama kamu. Semoga di umur yang baru ini, segala doa baikmu dikabulkan semesta. semoga kita tetap bersama selamanyaaaa, I love youuuu mwahh #MeisyaRamadhaniSelamanya";
+
 function mulai() {
     document.getElementById('musikUltah').play();
     nextHalaman(2);
