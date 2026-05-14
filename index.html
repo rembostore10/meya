@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special for You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="heart-loader">❤️</div>
+        <p>Menyiapkan sesuatu yang indah...</p>
+    </div>
+
+    <audio id="musikUltah" loop>
+        <source src="musik/lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="love-container"></div>
+
+    <div class="container">
+        <section id="halaman1">
+            <div class="glass-card">
+                <div class="floating">💖</div>
+                <h1>Hai Sayang...</h1>
+                <p>Ada pesan kecil untukmu hari ini.</p>
+                <button class="btn-glow" onclick="mulai()">Buka Pesan ❤️</button>
+            </div>
+        </section>
+
+        <section id="halaman2">
+            <div class="glass-card">
+                <div class="image-frame">
+                    <img src="foto/sayang.png" alt="Sayang">
+                </div>
+                <h2 class="title">Happy Birthday!</h2>
+                <div id="typewriter" class="ucapan-teks"></div>
+                <button id="btnLanjut" class="btn-glow" style="display:none;" onclick="nextHalaman(3)">Tiup Lilin Yuk? 🎂</button>
+            </div>
+        </section>
+
+        <section id="halaman3">
+            <div class="glass-card">
+                <div class="cake-area">
+                    <div class="candle" id="lilin" onclick="tiupLilin()">
+                        <div class="flame" id="api"></div>
+                        <div class="smoke" id="asap"></div>
+                    </div>
+                    <div class="cake"></div>
+                </div>
+                
+                <div id="wish-box" style="display:none; margin-top: 20px;">
+                    <h3>Make a Wish...</h3>
+                    <textarea id="harapanUser" placeholder="Tulis harapanmu di sini..."></textarea>
+                    <button class="btn-glow" onclick="kirimWA()">Kirim ke Aku ❤️</button>
+                </div>
+                <p id="petunjuk">Ketuk apinya untuk meniup...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
